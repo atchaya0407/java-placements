@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        int buses = 1;
+        int currentPassengers = 0;
+
+        for (int i = 0; i < n; i++) {
+            int group = sc.nextInt();
+
+            if (currentPassengers + group <= m) {
+                currentPassengers += group;
+            } else {
+                buses++;
+                currentPassengers = group;
+            }
+        }
+
+        System.out.println(buses);
+    }
+}
