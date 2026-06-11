@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[]=new int[n];
+        for(int i =0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int sn=sc.nextInt();
+        System.out.print("The elements that are divisible by "+sn+" is ");
+        int count=0;
+        int sum=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]%sn==0){
+                System.out.print(arr[i]+" ");
+                count++;
+                sum=sum+arr[i];
+            }
+        }
+        System.out.println();
+        System.out.println("The Count of the value that is divisible by "+sn+" is "+count);
+        System.out.print("The Sum of value that is divisible by "+sn+" is "+sum);
+        }
+}
